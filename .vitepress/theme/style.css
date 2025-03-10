@@ -1,0 +1,237 @@
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-lightest: #bcc0ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
+  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+
+  --vp-custom-block-tip-bg: var(--vp-custom-block-info-bg);
+
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f9f9f9;
+  --vt-c-white-mute: #f1f1f1;
+  --vt-c-black: #1a1a1a;
+  --vt-c-black-pure: #000000;
+  --vt-c-black-soft: #242424;
+  --vt-c-black-mute: #2f2f2f;
+  --vt-c-gray: #8e8e8e;
+  --vt-c-gray-light-1: #aeaeae;
+  --vt-c-gray-light-2: #c7c7c7;
+  --vt-c-gray-light-3: #d1d1d1;
+  --vt-c-gray-light-4: #e5e5e5;
+  --vt-c-gray-light-5: #f2f2f2;
+  --vt-c-gray-dark-1: #636363;
+  --vt-c-gray-dark-2: #484848;
+  --vt-c-gray-dark-3: #3a3a3a;
+  --vt-c-gray-dark-4: #282828;
+  --vt-c-gray-dark-5: #202020;
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.7);
+  --vt-c-text-light-3: rgba(60, 60, 60, 0.33);
+  --vt-c-text-light-4: rgba(60, 60, 60, 0.18);
+  --vt-c-text-light-code: var(--vt-c-indigo-soft);
+  --vt-c-text-dark-1: rgba(255, 255, 255, 0.87);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.6);
+  --vt-c-text-dark-3: rgba(235, 235, 235, 0.38);
+  --vt-c-text-dark-4: rgba(235, 235, 235, 0.18);
+  --vt-c-text-dark-code: var(--vt-c-indigo-light);
+  --vt-c-green: #42b883;
+  --vt-c-green-light: #42d392;
+  --vt-c-green-lighter: #35eb9a;
+  --vt-c-green-dark: #33a06f;
+  --vt-c-green-darker: #155f3e;
+  --vt-c-blue: #3b8eed;
+  --vt-c-blue-light: #549ced;
+  --vt-c-blue-lighter: #50a2ff;
+  --vt-c-blue-dark: #3468a3;
+  --vt-c-blue-darker: #255489;
+  --vt-c-yellow: #ffc517;
+  --vt-c-yellow-light: #ffe417;
+  --vt-c-yellow-lighter: #ffff17;
+  --vt-c-yellow-dark: #e0ad15;
+  --vt-c-yellow-darker: #bc9112;
+  --vt-c-red: #ed3c50;
+  --vt-c-red-light: #f43771;
+  --vt-c-red-lighter: #fd1d7c;
+  --vt-c-red-dark: #cd2d3f;
+  --vt-c-red-darker: #ab2131;
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+/**
+ * Shiki
+ */
+:root {
+  --vp-font-family-mono: "Monaco";
+  --vp-code-font-size: 0.9em;
+}
+
+body {
+  -webkit-font-smoothing: unset;
+  font-synthesis: unset;
+}
+
+.vp-doc [class*='language-'] pre {
+  font-weight: 900;
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand) !important;
+  --docsearch-container-background: rgba(0, 0, 0, 0.7);
+}
+
+/**
+ * VitePress: Custom fix
+ * -------------------------------------------------------------------------- */
+
+/*
+  Use lighter colors for links in dark mode for a11y.
+  Also specify some classes twice to have higher specificity
+  over scoped class data attribute.
+*/
+.dark .vp-doc a,
+.dark .vp-doc a > code,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink:hover,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink.active,
+.dark .link.link:hover,
+.dark .link.link.active,
+.dark .edit-link-button.edit-link-button,
+.dark .pager-link .title {
+  color: var(--vp-c-brand-lighter);
+}
+
+.dark .vp-doc a:hover,
+.dark .vp-doc a > code:hover {
+  color: var(--vp-c-brand-lightest);
+  opacity: 1;
+}
+
+/* Transition by color instead of opacity */
+.dark .vp-doc .custom-block a {
+  transition: color 0.25s;
+}
+
+.vp-sponsor.aside .vp-sponsor-grid.mini .vp-sponsor-grid-image {
+  max-width: 124px;
+}
+
+.vp-sponsor-grid.big .vp-sponsor-grid-image {
+  max-height: 96px;
+}
+
+.vp-sponsor-grid.mini .vp-sponsor-grid-image[alt="Bit"] {
+  max-height: 48px;
+}
+
+.vp-sponsor-grid.xmini .vp-sponsor-grid-image[alt="JetBrains"] {
+  max-height: 54px;
+}
+
+.vp-sponsor-grid.medium .vp-sponsor-grid-image[alt="JetBrains"] {
+  max-height: 100px;
+}
+
+/* Custom block */
+.custom-block.info {
+  border: 1px solid var(--vt-c-gray);
+}
+
+.custom-block.tip {
+  border: 1px solid var(--vt-c-green);
+}
+
+.tip > .custom-block-title {
+  color: var(--vt-c-green);
+}
+
+.custom-block.warning {
+  border: 1px solid var(--vt-c-yellow-dark);
+}
+
+.warning > .custom-block-title {
+  color: var(--vt-c-yellow-dark);
+}
+
+.custom-block.danger {
+  border: 1px solid var(--vt-c-red);
+}
+
+.danger > .custom-block-title {
+  color: var(--vt-c-red);
+}
+
+/* Badges */
+.vt-badge.wip:before {
+  content: "WIP";
+}
+
+.vt-badge.ts {
+  background-color: #3178c6;
+}
+.vt-badge.ts:before {
+  content: "TS";
+}
+
+.vt-badge.dev-only,
+.vt-badge.experimental {
+  color: var(--vt-c-text-light-1);
+  background-color: var(--vt-c-yellow);
+}
+
+.vt-badge.dev-only:before {
+  content: "Dev only";
+}
+
+.vt-badge.experimental:before {
+  content: "Experimental";
+}
+
+.vt-badge[data-text]:before {
+  content: attr(data-text);
+}
+
+.VPNavBarMenuLink > span,
+.VPSidebarItem h2,
+.VPNavScreenMenuLink > span {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 3px;
+}
+
+.VPNavBarMenuLink > span > img {
+  width: 20px;
+}
+
+.VPSidebarItem h2 > img {
+  width: 20px;
+}
