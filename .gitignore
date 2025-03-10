@@ -1,54 +1,18 @@
-# compiled output
-/dist
-/node_modules
-/build
-
-# Logs
-logs
-*.log
-npm-debug.log*
-
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# OS
-.DS_Store
-
-# Tests
 /coverage
-/.nyc_output
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
-# temp directory
+/src/client/shared.ts
+/src/node/shared.ts
+*.log
+*.tgz
+.DS_Store
+.idea
 .temp
-.tmp
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+.vite_opt_cache
+.vscode
+dist
+cache
+temp
+examples-temp
+node_modules
+pnpm-global
+TODOs.md
+*.timestamp-*.mjs
