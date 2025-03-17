@@ -3,13 +3,13 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
+  name: "Кайф"
   text: "A VitePress Site"
   tagline: My great project tagline
   actions:
     - theme: brand
       text: Markdown Examples
-      link: /markdown-examples
+      link: /docs/javascript/Исполнение
     - theme: alt
       text: API Examples
       link: /api-examples

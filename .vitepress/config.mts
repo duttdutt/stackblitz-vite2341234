@@ -222,9 +222,9 @@ export default defineConfig({
                 typesCache: createFileSystemTypesCache(),
                 errorRendering: 'line',
             }),
-            transformerNotationWordHighlight({
-                matchAlgorithm: 'v3'
-            })
+            // transformerNotationWordHighlight({
+            //     matchAlgorithm: 'v3'
+            // })
         ],
         config(md) {
             md.use(groupIconMdPlugin)
